@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- logo -->
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="src/images/logo/green icon.png"
+    />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/bootstrap.min.css.map" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- scroll script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+      *{
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <title>Golden Green</title>
+  </head>
+  <body>
+    <div class="tape"></div>
+    <div class="extra-info-nav">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="#location" class="location text-decoration-none"><i class="fa-solid fa-location-dot"></i>Giza, Egypt</a>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        <div class="language d-flex justify-content-center align-items-center">
+          <select class="form-select lang" name="language">
+            <option value="en" selected id="lang-en">EN</option>
+            <option value="ar" id="lang-ar">AR</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar-top">
+      <div class="container">
+        <div
+          id="mode"
+          class="mode d-flex justify-content-center align-items-center"
+        >
+          <i class="fa-solid fa-sun"></i>
+        </div>
+        <a href="#" class="logo">
+          <div class="load"><div></div></div>
+          <img src="src/images/logo/green icon.png" alt="" />
+        </a>
+        <div class="menu" style="z-index: 999;">
+          <div class="menu-icon un-active" id="settings-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="sidebar off" id="sidebar">
+      <h3>Menu</h3>
+      <hr />
+      <ul class="links list-unstyled d-flex flex-column">
+        <li class="active"><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-address-card"></i>About Us</a></li>
+        <li><a href="#partners"><i class="fa-solid fa-handshake"></i>Partners</a></li>
+        <li><a href="#services"><i class="fa-solid fa-database"></i>Services</a></li>
+        <li><a href="#work-with-us"><i class="fa-solid fa-person-circle-check"></i></i>Work With Us</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-headset"></i>Contact</a></li>
+      </ul>
+      <p class="settings d-flex justify-content-between align-items-center"><span><i class="fa-solid fa-gear"></i>settings</span> <i class="more fa-solid fa-caret-down"></i></p>
+      <div class="options-div">
+        <ul class="options off list-unstyled d-flex flex-column">
+          <li class="mode-sidebar">Dark Mode <i class="fa-solid fa-toggle-on"></i></li>
+          <li class="lang-ar">Language (EN) <i class="fa-solid fa-toggle-on"></i></li>
+          <li class="navbar-fixed">Navbar Fixed <i class="fa-solid fa-toggle-off"></i></li>
+          <li class="extra-navbar-fixed">Extra Navbar Fixed <i class="fa-solid fa-toggle-off"></i></li>
+        </ul>
+      </div>
+    </div>
+    <!---->
+
+    <section class="sec1 d-flex justify-content-center align-items-center">
+      <div
+        class="container d-flex justify-content-center align-items-center flex-column gap-4"
+      >
+        <img src="src/images/logo/the name2.png" alt="" />
+        <h3>Golden choice to a green world</h3>
+        <a
+          class="special-btn d-flex align-items-center text-center justify-content-center accordion-flush who-we"
+          href="#about"
+        >
+          Who we are
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+    </section>
+    
+    <section id="about" class="sec2 about  d-flex align-items-center flex-column">
+      <div class="waves">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wav1">
+          <path
+            fill="var(--green)"
+            fill-opacity="1"
+            d="M0,32L21.8,48C43.6,64,87,96,131,128C174.5,160,218,192,262,181.3C305.5,171,349,117,393,117.3C436.4,117,480,171,524,186.7C567.3,203,611,181,655,186.7C698.2,192,742,224,785,234.7C829.1,245,873,235,916,192C960,149,1004,75,1047,69.3C1090.9,64,1135,128,1178,170.7C1221.8,213,1265,235,1309,213.3C1352.7,192,1396,128,1418,96L1440,64L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"
+          ></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="wav2" viewBox="0 0 1440 320"><path fill="var(--green)" fill-opacity="1" d="M0,0L60,21.3C120,43,240,85,360,96C480,107,600,85,720,112C840,139,960,213,1080,229.3C1200,245,1320,203,1380,181.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+      </div>
+      <!--  -->
+      <div class="title d-flex justify-content-center align-items-center flex-column">
+        <h2>About Us</h2>
+        <h3>Some Info About Golden Green</h3>
+      </div>
+      <div class="container d-flex flex-column gap-5">
+        <div class="row row1 d-flex align-items-center">
+          <div class="about-content col-12 col-lg-7 col-md-12 col-sm-12">
+              <p>- Our Story: Golden Green was founded in 2019 Functioning in 2022 with a vision to 
+                revolutionize the trading, manufacturing, and pharmaceutical data analysis sectors. 
+                Over the years, we have built a strong reputation for quality, reliability, and innovation. <br>
+                - Mission: At Golden Green, we are committed to being a green company that prioritizes 
+                sustainability in everything we do. Our mission is to provide eco-friendly products and 
+                services that not only meet our customers' needs but also contribute to a healthier 
+                planet. We strive to reduce our carbon footprint, minimize waste, and promote 
+                environmental responsibility throughout our supply chain and operations. <br>
+              </p>
+          </div>
+          <!-- col-8  -->
+          <div class="about-img col-10 col-lg-4 col-md-7">
+              <div class="img">
+                  <img class="img-fluid" src="src/images/logo/white icon.svg" alt="about">
+                  <div class="layer"></div>
+              </div>
+          </div>
+        </div>
+        <div class="row row2 d-flex align-items-center">
+          <div class="about-img im2 col-8 col-lg-3 col-md-5">
+            <div class="img">
+                <img class="img-fluid" src="src/images/about.jpg" alt="about">
+                <div class="layer"></div>
+            </div>
+          </div>
+          <div class="about-content con2 col-12 col-lg-7 col-md-12">
+              <p>- Vision: Our vision at Golden Green is to enhance the pharmaceutical, Dental, and 
+                medical fields in Egypt through our data analysis service. We are dedicated to leveraging 
+                data-driven insights for our benefit and for the advancement of other pharmaceutical 
+                industries. Committed to eco-friendly practices, we aim to revolutionize the sector by 
+                integrating sustainability into every aspect of our operations, fostering a greener and 
+                more innovative future for healthcare. <br>
+              </p>
+          </div>
+        </div>
+    </section>
+
+    <section id="partners" class="partners d-flex overflow-hidden flex-column">
+      <div class="title d-flex justify-content-center align-items-center flex-column">
+        <h2>Partners</h2>
+        <h3>Our Partners & Supporters</h3>
+      </div>
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="src/images/final/ABC.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/Concentrix-.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/DMA.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/E.MAK.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/eTax.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/ipprotocol.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/Longman.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/Mavens.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/MEVAC.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/prosper.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/sanipure.png" alt=""></div>
+            <div class="swiper-slide"><img src="src/images/final/Shiny White dental centers.png" alt=""></div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services" id="services">
+      <div class="title text-center">
+        <h2>Services</h2>
+        <h3>We offer you many services in many fields</h3>
+      </div>
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center">
+          <div class="service ser1 col-lg-5 col-md-5">
+            <div class="icon">
+              <img class="img-fluid" src="src/images/services/machine2.png" alt="machine">
+            </div>
+            <h3>Machine Design</h3>
+            <p>We create a machine designs like wastewater equipment</p>
+          </div>
+          <div class="service ser2 col-lg-5 col-md-5">
+            <div class="icon">
+              <img class="img-fluid" src="src/images/services/trade.png" alt="trade">
+            </div>
+            <h3>Trading</h3>
+            <p>Medical supplies – Dental Supplies – Veterinary Supplies – Office Supplies– Office Supplies</p>
+          </div>
+          <div class="service ser3 col-lg-5 col-md-5">
+            <div class="icon">
+              <img class="img-fluid" src="src/images/services/FMCG.png" alt="FMCG">
+            </div>
+            <h3>FMCG</h3>
+            <p>FMCG Manufacturing like Toothpaste products</p>
+          </div>
+          <div class="service ser4 col-lg-5 col-md-5">
+            <div class="icon">
+              <img class="img-fluid" src="src/images/services/analysis.png" alt="analysis">
+            </div>
+            <h3>Data Analysis</h3>
+            <p>market research case studies.
+              - pharmaceutical business development
+              - retail and operations
+              - pharmacies data driven management.
+              - pharmaceutical market insights.
+              </p>
+          </div>
+        </div>
+      </div>
+      <img class="back1" src="src/images/background-effects/star.png" alt="">
+      <img class="back2" src="src/images/background-effects/star.png" alt="">
+    </section>
+
+    <section id="work-with-us" class="work-with-us d-flex align-items-center">
+      <div class="container-fluid d-flex justify-content-center align-items-center flex-column w-100">
+        <div class="bgAnimation" id="bgAnimation">
+          <div class="backgroundAmim"></div>
+        </div>
+        <div class="content d-flex justify-content-center align-items-center flex-column">
+          <h1 class="text-center">Work With Us</h1>
+          <p class="text-center">Now you can join to our wold and work with us</p>
+          <div class="btns w-100 d-flex justify-content-center gap-3 align-items-center flex-column">
+            <a class="a1 text-center special-btn d-flex align-items-center text-center justify-content-center accordion-flush who-we" href="https://docs.google.com/forms/d/e/1FAIpQLScuf0IPeacFIkAHnsZ3ChZdyq6b102oh5b4s_STWDKK5kjqbQ/viewform"
+              target="_blank">
+              Company
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <div class="or d-flex w-100 justify-content-center align-items-center gap-3">
+              <hr> <span>OR</span> <hr>
+            </div>
+            <a class="a2 text-center special-btn d-flex align-items-center text-center justify-content-center accordion-flush who-we"
+              target="_blank" aria-label="Chat on WhatsApp" href="https://wa.me/+201116817687">
+              Career
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="contact" class="contact overflow-hidden d-flex flex-column">
+      <div class="title text-center">
+        <h2>Contact Us</h2>
+        <h3>Send Your Message To Golden Green!</h3>
+      </div>
+      <div class="container">
+        <div class="row contact-info d-flex justify-content-center mt-5 m-auto">
+          <div class="cols-lg-4 con1 col-sm-12 p-4">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Contact Numbers</h3>
+            <p class="text-black-50">
+              <i class="fa-solid fa-phone"></i>
+              (+20)1092989390
+            </p>
+            <p class="text-black-50">
+              <i class="fa-solid fa-phone"></i>
+              (+20)1101201325
+            </p>
+            <p class="text-black-50">
+              <i class="fa-solid fa-phone"></i>
+              (+20)1116817687
+            </p>
+          </div>
+          <div class="cols-lg-4 con2 col-sm-12 p-4">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email Address</h3>
+            <p class="text-black-50">
+              <i class="fa-solid fa-paper-plane"></i>
+              goldengreen.eg@gmail.com
+            </p>
+          </div>
+          <div class="cols-lg-4 con3 col-sm-12 p-4">
+            <i class="fa-solid fa-map-location"></i>
+            <h3>Address</h3>
+            <p class="text-black-50">
+              <i class="fa-solid fa-location-dot"></i>
+              80 Salah Salem, Giza, Egypt
+            </p>
+          </div>
+        </div>
+        <div class="row send">
+          <div class="map col-sm-12 col-lg-6" id="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.874301015593!2d31.208848500000002!3d30.0117655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145846e4f809f30d%3A0x724d485f3d809216!2zODAg2LXZhNin2K0g2LPYp9mE2YXYjCDYp9mE2LnZhdix2KfZhtmK2Kkg2KfZhNi02LHZgtmK2KnYjCDZgtiz2YUg2KfZhNis2YrYstip2Iwg2YXYrdin2YHYuNipINin2YTYrNmK2LLYqSAzNzI0MTEy!5e0!3m2!1sar!2seg!4v1716411888887!5m2!1sar!2seg"
+             style="border:0;" 
+             allowfullscreen="" 
+             loading="lazy" 
+             referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="form col-sm-12 col-lg-6">
+            <h1>Send Mail</h1>
+            <hr class="mb-4">
+            <form class="d-flex flex-column justify-content-evenly" action="https://formsubmit.co/goldengreen.eg@gmail.com" method="POST">  
+              <div class="input-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">name</label>
+              </div>
+              <div class="input-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">email</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="subject" name="subject" placeholder=" " required>
+                <label for="subject">subject</label>
+              </div>
+              <div class="input-group">
+                <textarea name="content" cols="15" rows="10" id="content" placeholder="" required></textarea>
+                <label for="content">content</label>
+              </div>
+              <input type="hidden" name="_template" value="table">
+              <button type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="alert-background" id="alert-background"></div>
+    <div class="right-bar d-flex justify-content-center align-items-center flex-column" id="right-bar">
+      <div class="menu item">
+        <div class="menu-icon un-active" style="z-index: 999;" id="settings-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="settings item" id="settings">
+        <div class="more">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div id="mode" class="mode d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-sun"></i>
+        </div>
+        <div title="Change Language To Arabic">
+          <a class="lang-ar fw-bold">AR</a>
+        </div>
+      </div>
+      <div class="go-top item d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
+
+    <!-- start footer  -->
+    <footer>
+      <div class="rowf d-flex">
+        <div class="colf">
+          <img src="./src/images/logo/green icon.png" alt="logo" class="logoff">
+          <p>Our Story: Golden Green was founded in 2019 Functioning in 2022 with a vision to 
+            revolutionize the trading, manufacturing, and pharmaceutical data analysis sectors. 
+            Over the years, we have built a strong reputation for quality, reliability, and innovation.</p>
+        </div>
+        <div class="colf">
+          <h3>Office <div class="underline"><span></span></div> </h3>
+          <p>Goldengreen</p>
+          <p>80 Salah Salem, Giza, Egypt</p>
+          <p class="email-id">goldengreen.eg@gmail.com</p>
+          <p>(+20) 1092989390</p>
+          <p>(+20) 1101201325</p>
+          <p>(+20) 1116817687</p>
+        </div>
+        <div class="colf">
+          <h3>Links<div class="underline"><span></span></div></h3>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#work-with-us">Work with Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="colf">
+          <h3>Social Media <div class="underline"><span></span></div></h3>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/golden-green-org/" target="_blank"><i class="fab fa-brands fa-linkedin-in"></i></a>
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/+201116817687" target="_blank"><i class="fab fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="line">
+
+      <p class="copyright">Goldengreen © <span></span> - All Rights Reserved</p>
+    </footer>
+
+    <!-- loading -->
+    <div id="loading-div" class="loading-div d-flex flex-column justify-content-center align-items-center text-center">
+      <div class="layer1 mb-3">
+        <div class="layer2">
+          <img src="src/images/logo/green icon.png" class="img-fluid" alt="logo">
+        </div>
+      </div>
+      <h3>Loading...</h3>
+    </div>
+
+
+    <!-- js -->
+    <script>
+      if (window.localStorage.getItem('language')) { } else {
+        window.localStorage.setItem('language', 'en');
+      }
+      let loadingDiv = document.getElementById('loading-div');
+      window.onload = ()=>{
+        loadingDiv.style = "display:none !important";
+        document.body.style = "overflow:auto";
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js.map"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
