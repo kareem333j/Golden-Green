@@ -686,7 +686,7 @@ a {
 
 .sidebar .options.off {
     width: 100%;
-    margin-top: -210px;
+    margin-top: -200px;
 }
 
 .sidebar .options li {
@@ -714,7 +714,7 @@ a {
 .options-div {
     width: 100%;
     overflow: hidden;
-    height: 190px;
+    height: 170px;
 }
 
 /* sec1 */
