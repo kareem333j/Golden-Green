@@ -285,7 +285,7 @@ for(let i = 0; i < numberOfColorBoxes; i++) {
 
 
 // scrollReveal
-ScrollReveal({ distance: "5000px" });
+ScrollReveal({ distance: "500px" });
 ScrollReveal().reveal(".sec1 img", {
     origin: "top",
     reset: true,

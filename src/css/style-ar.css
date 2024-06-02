@@ -1,0 +1,60 @@
+* {
+    font-family: "Noto Sans Arabic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.sidebar.off {
+    right: -260px;
+}
+.sidebar .links {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.sidebar .links li:hover {
+    padding-right: 15px;
+}
+.sidebar .links li a i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.sidebar .settings span i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.sidebar .settings:hover{
+    padding-right: 15px;
+}
+.right-bar.active{
+    right: auto;
+    left: 10px;
+}
+.right-bar{
+    right: auto;
+    left: -100px;
+}
+.sec1 h3{
+    background: -webkit-linear-gradient(360deg, var(--green), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.special-btn{
+    background: linear-gradient(90deg, var(--green), var(--gold));
+}
+.title p{
+    background: -webkit-linear-gradient(360deg, var(--green), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.work-with-us p{
+    background: -webkit-linear-gradient(360deg, var(--green), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
